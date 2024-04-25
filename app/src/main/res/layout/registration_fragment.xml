@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@drawable/im_bg_authorization"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_marginBottom="48dp"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16"/>
+
+    <ImageView
+        android:id="@+id/iv_register_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_back_white"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_register_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="Регистрация"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toTopOf="@id/gl_top" />
+
+    <TextView
+        android:id="@+id/tv_register_nameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Имя аккаунта"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_title" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_register_nameTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_register_nameTitle"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_needed"/>
+    <EditText
+        android:id="@+id/et_register_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_et"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="12dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:hint="Введите ваши имя и фамилию"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintEnd_toEndOf="@+id/gl_right"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_nameTitle"/>
+
+    <TextView
+        android:id="@+id/tv_register_emailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/et_register_name" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_needed"
+        app:layout_constraintStart_toEndOf="@+id/tv_register_emailTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_register_emailTitle" />
+    <EditText
+        android:id="@+id/et_register_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="12dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:hint="Введите адрес электронной почты"
+        android:background="@drawable/bg_et"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintEnd_toEndOf="@+id/gl_right"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_emailTitle"/>
+
+    <TextView
+        android:id="@+id/tv_register_genderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пол"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/et_register_email" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_needed"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_register_genderTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_register_genderTitle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_register_male"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_fab_full"
+        android:gravity="center"
+        android:text="М"
+        android:textColor="@color/white"
+        android:paddingBottom="4dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_genderTitle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_register_female"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_fab_void"
+        android:layout_marginStart="12dp"
+        android:gravity="center"
+        android:text="Ж"
+        android:textColor="@color/green"
+        android:paddingBottom="4dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/bt_register_male"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register_genderTitle" />
+
+
+    <TextView
+        android:id="@+id/tv_register_ageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AgeTitle"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/bt_register_male" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_needed"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_register_ageTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_register_ageTitle" />
+
+    <GridLayout
+        android:id="@+id/gridLayout_register_age"
+        android:layout_width="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_ageTitle"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        android:columnCount="4"
+        app:layout_constraintEnd_toEndOf="@id/gl_right">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_register_ages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:itemCount="6"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        android:orientation="horizontal"/>
+    </GridLayout>
+
+
+    <TextView
+        android:id="@+id/tv_register_infoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дополнительная информация"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout_register_age" />
+    <EditText
+        android:id="@+id/et_register_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="12dp"
+        android:minHeight="100dp"
+        android:paddingVertical="12dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:hint="Введите дополнительную информацию о вас"
+        android:gravity="top"
+        android:background="@drawable/bg_et"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintEnd_toEndOf="@+id/gl_right"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_infoTitle"/>
+
+    <TextView
+        android:id="@+id/tv_register_passTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пароль"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/et_register_info" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_register_passTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_register_passTitle"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_needed"/>
+    <EditText
+        android:id="@+id/et_register_pass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_et"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="12dp"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:hint="Введите пароль"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintEnd_toEndOf="@+id/gl_right"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_passTitle"/>
+
+    <TextView
+        android:id="@+id/tv_register_passConfirmTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подтвердите пароль"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/et_register_pass" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_needed"
+        app:layout_constraintStart_toEndOf="@+id/tv_register_passConfirmTitle"
+        app:layout_constraintTop_toTopOf="@+id/tv_register_passConfirmTitle" />
+    <EditText
+        android:id="@+id/et_register_passConfirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_et"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="12dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:hint="Введите пароль повторно"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintEnd_toEndOf="@+id/gl_right"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_passConfirmTitle"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_register_signUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bg_button"
+        android:paddingVertical="12dp"
+        android:text="Зарегистрироваться"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintEnd_toEndOf="@id/gl_right"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@id/et_register_passConfirm" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

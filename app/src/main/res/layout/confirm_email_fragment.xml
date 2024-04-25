@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/im_bg_authorization"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16"/>
+
+    <ImageView
+        android:id="@+id/iv_confirmEmail_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_back_white"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_confirmEmail_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans_semibold"
+        android:text="Введите номер, отправленный на email"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@id/gl_right"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toTopOf="@id/gl_top" />
+
+    <TextView
+        android:id="@+id/tv_confirmEmail_emailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: email"
+        android:textColor="@color/grey"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmEmail_title" />
+
+    <EditText
+        android:id="@+id/et_confirmEmail_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:paddingVertical="12dp"
+        android:textSize="16sp"
+        android:maxLength="1"
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.11"
+        android:background="@drawable/bg_et"
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmEmail_emailValue" />
+
+    <EditText
+        android:id="@+id/et_confirmEmail_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:textSize="16sp"
+        android:maxLength="1"
+        android:gravity="center"
+        android:layout_marginStart="12dp"
+        app:layout_constraintWidth_percent="0.11"
+        android:background="@drawable/bg_et"
+        app:layout_constraintStart_toEndOf="@+id/et_confirmEmail_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmEmail_emailValue" />
+    <EditText
+        android:id="@+id/et_confirmEmail_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:paddingVertical="12dp"
+        android:textSize="16sp"
+        android:maxLength="1"
+        android:gravity="center"
+        android:layout_marginStart="12dp"
+        app:layout_constraintWidth_percent="0.11"
+        android:background="@drawable/bg_et"
+        app:layout_constraintStart_toEndOf="@+id/et_confirmEmail_2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmEmail_emailValue" />
+    <EditText
+        android:id="@+id/et_confirmEmail_4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:textSize="16sp"
+        android:maxLength="1"
+        android:layout_marginStart="12dp"
+        android:paddingVertical="12dp"
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.11"
+        android:background="@drawable/bg_et"
+        app:layout_constraintStart_toEndOf="@+id/et_confirmEmail_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmEmail_emailValue" />
+    <EditText
+        android:id="@+id/et_confirmEmail_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:textSize="16sp"
+        android:maxLength="1"
+        android:paddingVertical="12dp"
+        android:gravity="center"
+        android:layout_marginStart="12dp"
+        app:layout_constraintWidth_percent="0.11"
+        android:background="@drawable/bg_et"
+        app:layout_constraintStart_toEndOf="@+id/et_confirmEmail_4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmEmail_emailValue" />
+
+    <EditText
+        android:id="@+id/et_confirmEmail_6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
+        android:paddingVertical="12dp"
+        android:maxLength="1"
+        android:gravity="center"
+        android:background="@drawable/bg_et"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/et_confirmEmail_5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmEmail_emailValue"
+        app:layout_constraintWidth_percent="0.11" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_confirmEmail_signIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:paddingVertical="12dp"
+        android:text="Подтвердить"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gl_right"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmEmail_sendAgain" />
+
+    <TextView
+        android:id="@+id/tv_confirmEmail_sendAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отправить повторно"
+        android:textColor="@color/blue"
+        android:fontFamily="@font/opensans_semibold"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/et_confirmEmail_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
