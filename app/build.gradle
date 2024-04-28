@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.blood_angel.touristroots'
+    namespace 'com.polytech.touristroots'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.blood_angel.touristroots"
+        applicationId 'com.polytech.touristroots'
         minSdk 22
         targetSdk 34
         versionCode 1
@@ -27,9 +27,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-
+apply plugin: 'com.google.gms.google-services'
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -40,4 +39,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
+    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
+    implementation("com.google.firebase:firebase-analytics")
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.1'
 }

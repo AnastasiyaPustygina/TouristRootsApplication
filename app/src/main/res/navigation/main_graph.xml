@@ -7,12 +7,12 @@
 
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.blood_angel.touristroots.MainActivity"
+        android:name="com.polytech.touristroots.MainActivity"
         tools:layout="@layout/activity_main"
         android:label="MainActivity" />
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.blood_angel.touristroots.fragment.SignInFragment"
+        android:name="com.polytech.touristroots.fragment.SignInFragment"
         tools:layout="@layout/authorization_fragment"
         android:label="SignInFragment" >
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.blood_angel.touristroots.fragment.SignUpFragment"
+        android:name="com.polytech.touristroots.fragment.SignUpFragment"
         tools:layout="@layout/registration_fragment"
         android:label="SignUpFragment" >
         <action
@@ -37,7 +37,7 @@
     <fragment
         android:id="@+id/confirmEmailFragment"
         tools:layout="@layout/confirm_email_fragment"
-        android:name="com.blood_angel.touristroots.fragment.ConfirmEmailFragment"
+        android:name="com.polytech.touristroots.fragment.ConfirmEmailFragment"
         android:label="ConfirmEmailFragment" >
         <action
             android:id="@+id/action_confirmEmailFragment_to_signInFragment"
@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.blood_angel.touristroots.fragment.ProfileFragment"
+        android:name="com.polytech.touristroots.fragment.ProfileFragment"
         tools:layout="@layout/profile_fragment"
         android:label="ProfileFragment" >
         <action
@@ -61,7 +61,7 @@
     <fragment
         android:id="@+id/profileEditFragment"
         tools:layout="@layout/profile_edit_fragment"
-        android:name="com.blood_angel.touristroots.fragment.ProfileEditFragment"
+        android:name="com.polytech.touristroots.fragment.ProfileEditFragment"
         android:label="ProfileEditFragment" >
         <action
             android:id="@+id/action_profileEditFragment_to_profileFragment"

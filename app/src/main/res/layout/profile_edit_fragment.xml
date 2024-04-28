@@ -51,7 +51,7 @@
             android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_editProfile_title">
+            app:layout_constraintTop_toBottomOf="@+id/gl_top">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="180dp"
@@ -60,14 +60,16 @@
                 app:cardCornerRadius="250dp">
 
                 <ImageView
+                    android:id="@+id/iv_editProfile_ava"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     android:scaleType="centerCrop"
-                    android:src="@color/purple_500" />
+                    android:background="@color/white" />
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/bt_editProfile_changeImage"
             android:layout_width="64dp"
             android:layout_height="64dp"
             app:backgroundTint="@color/green"
